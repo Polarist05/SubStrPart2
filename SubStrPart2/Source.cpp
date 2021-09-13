@@ -7,6 +7,7 @@ int main() {
 	v.push_back(0);
 	string s;
 	cin >> s;
+	s = s + s;
 	int i = 1;
 	for (; i < s.size(); ) {
 		if (s[0] == s[i]) {
@@ -44,8 +45,8 @@ int main() {
 		}
 	}	
 	for (i = 0; i < v.size(); i++) {
-		if (v[i] == s.size()/2) {
-			printf("%d",i);
+		if (v[i] >= s.size()/2) {
+			printf("%d", i);
 			return 0;
 		}
 	}
